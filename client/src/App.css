@@ -1,5 +1,11 @@
+body {
+  margin: 10px 40px; 
+}
+
+
+
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -29,12 +35,29 @@
 }
 
 
+
+
 .job {
   width: 80%;
   margin: 0 auto;
-  font-size: 35px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 20px 10px;
+  align-items: center;
+}
+
+
+.job:hover {
+  cursor: pointer;
+}
+
+.job-company {
+  padding: 0 30px;
+}
+
+.job-dialogue {
+  padding: 30px 50px;
 }
 
 @keyframes App-logo-spin {

@@ -21,8 +21,6 @@ async function fetchGithub(){
         resultCount = jobs.length;
         console.log('got ' +  resultCount + " jobs");
         onPage++;
-
-
     }
 
 
