@@ -46,10 +46,16 @@ body {
   padding: 20px 10px;
   align-items: center;
 }
-
+ 
 
 .job:hover {
   cursor: pointer;
+  color: #666666;
+}
+
+.detail-logo {
+  height: 30px;
+  float: right;
 }
 
 .job-company {
