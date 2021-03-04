@@ -4,7 +4,7 @@ import './App.css';
 import Jobs from './Jobs';
 
 
-const JOB_API_URL = 'http://localhost:3001/jobs'
+const JOB_API_URL = '/api/jobs'
 
 const mockJobs = [
 
