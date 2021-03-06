@@ -3,7 +3,7 @@ import React from "react";
 
 import Paper from "@material-ui/core/Paper";
 
-export default function Job({ job, onClick}) {
+export default function Job({job, onClick}) {
   return (
     <Paper onClick = {onClick} className={"job"}>
       <div>

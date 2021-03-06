@@ -2,17 +2,9 @@ import fetch from 'node-fetch';
 import React from 'react';
 import './App.css';
 import Jobs from './Jobs';
-
+import JobCards from './JobCards'
 
 const JOB_API_URL = '/api/jobs';
-
-const mockJobs = [
-
-  {title: 'SWE 1', company: 'Google'},
-  {title: 'SWE 1', company: 'Apple'}
-
-]
-
 
 async function fetchJobs (updateCb){
   const res = await fetch(JOB_API_URL);
@@ -32,11 +24,10 @@ React.useEffect(()=>{
   fetchJobs(updateJobs);
 }, [])
 
-
   return (
     <div className="App">
+      <JobCards jobs={jobList}/>
       <Jobs jobs={jobList}/>
-
     </div>
   );
 }

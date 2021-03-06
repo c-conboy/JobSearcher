@@ -2,8 +2,6 @@ body {
   margin: 10px 40px; 
 }
 
-
-
 .App {
   text-align: left;
 }
@@ -34,11 +32,19 @@ body {
   color: #61dafb;
 }
 
-
+.jobs {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
 
 
 .job {
-  width: 80%;
+  text-align: left;
+  width: 60%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -46,7 +52,31 @@ body {
   padding: 20px 10px;
   align-items: center;
 }
+
+.title {
+  width: 100%;
+}
  
+
+.jobCards{
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.jobCard {
+  width: 35%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-logo{
+  width: 75%;
+  padding: 25px;
+}
 
 .job:hover {
   cursor: pointer;
