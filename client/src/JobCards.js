@@ -6,11 +6,23 @@ import JobCard from "./JobCard";
 export default function JobCards({ jobs }) {
 
     const [activeStep, setActiveStep] = React.useState(0);
-
+    const [addedJobList, setAddedJobList] = React.useState([]);
 
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
     };
+
+
+    const handleAddJob = (newJob) => {
+        /*console.log("active step:" + activeStep);
+        console.log("Job at activestep:" + jobs[activeStep].company);
+        console.log("Before add: ");
+        console.log(addedJobList);*/
+        console.log(newJob);
+        setAddedJobList([newJob, ...addedJobList]);
+        //console.log("After add: ");
+       // console.log(addedJobList);
+    }
 
 
     return(
@@ -19,7 +31,7 @@ export default function JobCards({ jobs }) {
             Job Searcher
         </Typography>
 
-        <JobCard job = {jobs[activeStep]} next = {handleNext}></JobCard>
+        <JobCard job = {jobs[activeStep]} next = {handleNext} add = {handleAddJob}></JobCard>
 
         </div>
     )

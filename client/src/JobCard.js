@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 
-export default function JobCard({ job, next }) {
+export default function JobCard({ job, next, add}) {
 
 
     if(job == null){
@@ -13,6 +13,12 @@ export default function JobCard({ job, next }) {
     }
 
 
+    const handleAdd = () => {
+        add(job);
+        next();
+    }
+
+    console.log("Current job card is:" + job.company);
 
 
     return(
@@ -27,12 +33,13 @@ export default function JobCard({ job, next }) {
             </CardContent>
 
             <CardActions>
-                <Button onClick = {next}>
+                <Button onClick = {handleAdd}>
                    <ThumbDownIcon style={{ color: "#8B0000" }} ></ThumbDownIcon>
                 </Button>
 
                 <Button onClick = {next}>
                     <ThumbUpIcon style={{ color: "#006400" }} ></ThumbUpIcon>
+                    
                 </Button>
 
             </CardActions>
