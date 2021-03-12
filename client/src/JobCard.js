@@ -33,11 +33,11 @@ export default function JobCard({ job, next, add}) {
             </CardContent>
 
             <CardActions>
-                <Button onClick = {handleAdd}>
+                <Button onClick = {next}>
                    <ThumbDownIcon style={{ color: "#8B0000" }} ></ThumbDownIcon>
                 </Button>
 
-                <Button onClick = {next}>
+                <Button onClick = {handleAdd}>
                     <ThumbUpIcon style={{ color: "#006400" }} ></ThumbUpIcon>
                     
                 </Button>

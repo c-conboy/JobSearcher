@@ -20,14 +20,21 @@ function App() {
 
   const [jobList, updateJobs] = React.useState([]);
 
+  const [addedJobList, setAddedJobList] = React.useState([]);
+
+  
+  const handleAddJob = (newJob) => { 
+    setAddedJobList([newJob, ...addedJobList]);
+  }
+
 React.useEffect(()=>{
   fetchJobs(updateJobs);
 }, [])
 
   return (
     <div className="App">
-      <JobCards jobs={jobList}/>
-      <Jobs jobs={jobList}/>
+      <JobCards jobs={jobList} handleAdd ={handleAddJob}/>
+      <Jobs jobs={addedJobList}/>
     </div>
   );
 }

@@ -51,7 +51,7 @@ export default function Jobs({ jobs }) {
     };
 
 //Pagination
-  const jobsPerPage = 18; 
+  const jobsPerPage = 6; 
   const numJobs = jobs.length; 
   const numPages = Math.floor(numJobs / jobsPerPage);
   const [activeStep, setActiveStep] = React.useState(0);
